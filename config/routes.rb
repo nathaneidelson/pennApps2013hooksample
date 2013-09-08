@@ -1,20 +1,11 @@
 Backend::Application.routes.draw do
 
- # resources :clients
-  resources :files
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'clients#new'
 
-  get 'files/:id/save' => 'files#save'
-
-  get 'clients/create' => 'clients#create'
-  get 'clients/new' => 'clients#new'
-
-  get 'clients/getBatchedJSONData/:token' => 'clients#getBatchedJSONData'
+  post 'users/notifyAll' => 'users#notifyAll'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

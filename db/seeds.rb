@@ -6,4 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-JsonAsset.create(:name => "test_file", :content => "content is awesome")
+User.create(deviceToken: 'XXXXX')
+User.create(deviceToken: 'XXXXX')
+User.create(deviceToken: 'XXXXX')
