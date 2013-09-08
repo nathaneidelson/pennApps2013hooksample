@@ -16,20 +16,6 @@ ActiveRecord::Schema.define(version: 20130908022137) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "clients", force: true do |t|
-    t.string   "token"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "json_assets", force: true do |t|
-    t.string   "name"
-    t.text     "content"
-    t.integer  "client_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
     t.string   "deviceToken"
     t.datetime "created_at"

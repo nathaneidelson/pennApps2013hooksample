@@ -5,7 +5,7 @@ Backend::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  post 'users/notifyAll' => 'users#notifyAll'
+  get 'users/notifyAll' => 'users#notifyAll'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
