@@ -8,10 +8,12 @@ class UsersController < ApplicationController
 
   def notifyAll
 
+    puts "HERE"
+
     User.all.each do |user|
       p "push to #{user.deviceToken}"
       APNS.send_notification(user.deviceToken,
-                             :alert => nil, :sound => 'default', :other => {:type => 'pennapps'})
+                             :sound => 'default', :other => {:type => 'pennapps'})
     end
 
   end
