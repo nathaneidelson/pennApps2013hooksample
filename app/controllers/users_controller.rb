@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     User.all.each do |user|
       p "push to #{user.deviceToken}"
       APNS.send_notification(user.deviceToken,
-                             :sound => 'default', :other => {:type => 'pennapps'})
+                             :alert => 'PennApps is awesome!', :sound => 'default', :other => {:type => 'pennapps'})
     end
 
   end
